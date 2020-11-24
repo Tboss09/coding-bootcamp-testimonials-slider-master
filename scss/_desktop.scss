@@ -1,0 +1,83 @@
+@media screen and (min-width: 1040px) {
+  img{
+    box-shadow: 3px 13px 16px 1px #00000036;
+  }
+  .image__slider svg {
+    height: 582px;
+    width: 368px;
+    z-index: -9999;
+    position: relative;
+    left: 236px;
+    /* bottom: -126px; */
+  }
+  .image__slider--one {
+    display: none;
+    grid-template-columns: 400px;
+    // position: relative;
+    justify-content: flex-end;
+
+    .sliderInnertext {
+      position: absolute;
+      left: -400px;
+      top: 160px;
+      width: 550px;
+      text-align: left;
+      h2 {
+        font-weight: 400;
+        font-size: 2.3rem;
+        line-height: 35px;
+        text-align: left;
+        width: 620px;
+      }
+      p {
+        margin-top: 10px;
+        font-size: 1.7rem;
+        &:nth-of-type(2) {
+          padding-top: 10px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  img {
+    padding: 0px;
+    grid-column: 1/-1;
+    position: relative;
+    right: -158px;
+    top: 48px;
+  }
+
+  .active {
+    display: grid;
+  }
+
+  .button {
+    .tabs {
+      top: -152px;
+      left: 778px;
+    }
+  }
+  .p-flx {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  li {
+    cursor: pointer;
+  }
+  .last-svg {
+    position: fixed;
+    bottom: -64px;
+    width: 518px;
+    height: 25%;
+    left: 0px;
+    background: url("/images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 0px;
+  }
+  .attribution{
+    position: relative;
+  }
+}
