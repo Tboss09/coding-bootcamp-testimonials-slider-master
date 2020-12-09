@@ -1,3 +1,86 @@
+@import"./normalize";
+@import"./variable";
+
+@function weight($weightName) {
+    @return map-get($weight, $weightName)
+}
+
+;
+
+@function color($colorName) {
+    @return map-get($color, $colorName)
+}
+
+;
+
+html {
+    font-size: 12px;
+}
+
 body {
     font-family: 'Inter', sans-serif;
+    overflow-y: hidden;
+}
+
+h1 {
+    color: color("dark-blue");
+}
+
+// img
+
+
+// Header
+header {
+    margin: 5vh 8vw;
+
+    .header {
+        position: relative;
+        text-align: center;
+        background: url("../images/pattern-bg.svg");
+        background-repeat: no-repeat;
+        background-position: left top;
+        height: 45vh;
+
+        img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            max-width: 100%;
+            margin-top: 6vh;
+            box-shadow: -1px 9px 7px 0px #0000002b;
+        }
+    }
+
+    section {
+        text-align: center;
+
+        h4 {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 5vh;
+            font-size: 1.5rem;
+            line-height: 24px;
+            font-weight: weight("light");
+            color: color("dark-blue");
+            height: 15vh;
+
+
+
+            &:nth-of-type(2) {
+                font-size: 1.3rem;
+                line-height: 24px;
+                display: flex;
+                flex-direction: column;
+                font-weight: weight("bold");
+                color: color("dark-blue");
+                margin-top: 12vh;
+
+                span {
+                    font-weight: weight("med");
+                    color: color("grey-blue");
+                }
+            }
+        }
+    }
 }
