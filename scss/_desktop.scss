@@ -20,6 +20,7 @@
             top: 52vh !important;
             left: 3vw !important;
 
+
         }
     }
 
@@ -28,6 +29,10 @@
     }
 
     section {
+        &::before {
+            top: 110px !important;
+            background-repeat: no-repeat;
+        }
 
         p {
             margin-left: 230px;
