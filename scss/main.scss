@@ -20,6 +20,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     overflow-y: hidden;
+    position: relative;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
 
 // Header
 header {
-    margin: 5vh 8vw;
+    margin: 3vh 8vw;
 
     .header {
         position: relative;
@@ -40,47 +41,123 @@ header {
         background-repeat: no-repeat;
         background-position: left top;
         height: 45vh;
+        transition: background 0.5s ease-in;
 
         img {
+            opacity: 1;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             max-width: 100%;
-            margin-top: 6vh;
-            box-shadow: -1px 9px 7px 0px #0000002b;
+            margin-top: 4vh;
+            box-shadow: 1px 12px 14px 3px #00000018;
+            transition: opacity 0.5s;
+        }
+
+        &__buttons {
+            background: #fff;
+            position: absolute;
+            top: 244px;
+            z-index: 2;
+            left: 63%;
+            width: 73px;
+            margin-left: -20vw;
+            height: 35px;
+            border-radius: 4.1vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .btn {
+                appearance: none;
+                display: flex;
+                flex-direction: row;
+                border: none;
+
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
     }
 
     section {
         text-align: center;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-repeat: no-repeat;
+            background: url("../images/pattern-quotes.svg");
+            height: 40px;
+            width: 48px;
+            top: -20px;
+            right: 34vw;
+            z-index: -1;
+        }
+
+
+        .bg_quote {
+            background: url("../images/pattern-quotes.svg");
+            background-position: center bottom;
+            height: 10vh;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 30px;
+        }
+
 
         h4 {
             text-align: center;
         }
 
         p {
-            margin-top: 5vh;
+            margin-top: 8vh;
             font-size: 1.5rem;
             line-height: 24px;
             font-weight: weight("light");
             color: color("dark-blue");
-            height: 15vh;
 
-
+            &.one {
+                width: 93%;
+            }
 
             &:nth-of-type(2) {
-                font-size: 1.3rem;
-                line-height: 24px;
+                background: transparent;
                 display: flex;
                 flex-direction: column;
-                font-weight: weight("bold");
+                margin-top: 2.5vh;
+                font-size: 1.4rem;
+                line-height: 24px;
+                font-weight: 700;
                 color: color("dark-blue");
-                margin-top: 12vh;
+                margin-bottom: 20px;
+
 
                 span {
-                    font-weight: weight("med");
+                    font-weight: weight("light");
                     color: color("grey-blue");
                 }
             }
         }
+    }
+}
+
+footer {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url("../images/pattern-curve.svg");
+        max-width: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 29vh;
+        top: -25px;
+        right: 24vw;
     }
 }
