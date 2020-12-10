@@ -44,12 +44,12 @@ header {
         transition: background 0.5s ease-in;
 
         img {
-            opacity: 1;
+            opacity: 0.95;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             max-width: 100%;
             margin-top: 4vh;
-            box-shadow: 1px 12px 14px 3px #00000018;
+            box-shadow: 1px 15px 14px 3px #00000018;
             transition: opacity 0.5s;
         }
 
@@ -58,9 +58,11 @@ header {
             position: absolute;
             top: 244px;
             z-index: 2;
-            left: 63%;
-            width: 73px;
-            margin-left: -20vw;
+            left: 50%;
+            margin: auto;
+            width: 72px;
+            display: block;
+            margin-left: -36px;
             height: 35px;
             border-radius: 4.1vw;
             display: flex;
@@ -85,7 +87,6 @@ header {
     section {
         text-align: center;
         position: relative;
-
         &::before {
             position: absolute;
             content: "";
@@ -97,8 +98,6 @@ header {
             right: 34vw;
             z-index: -1;
         }
-
-
         .bg_quote {
             background: url("../images/pattern-quotes.svg");
             background-position: center bottom;
@@ -108,10 +107,6 @@ header {
             right: 30px;
         }
 
-
-        h4 {
-            text-align: center;
-        }
 
         p {
             margin-top: 8vh;
@@ -161,3 +156,4 @@ footer {
         right: 24vw;
     }
 }
+@import'./desktop';

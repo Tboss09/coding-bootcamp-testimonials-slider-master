@@ -8,7 +8,11 @@
     curveBtn.forEach(btn => btn.addEventListener("click", slideInImgAndText));
 
     function renderHtml(value) {
+
+
+
         avatar.setAttribute("src", `images/image-${value}.jpg`);
+        avatar.style.opacity = "1";
         avatar.style.transition = "0.5s width opacity ease-in";
         let article = [{
             body: `
@@ -31,16 +35,28 @@
         if (this.dataset.click == "left") {
             leftCount == 2 ? leftCount = 0 : [];
             leftCount++;
-            console.log(leftCount);
             renderHtml(leftCount)
             return;
         }
+        rightCount == 1 ? rightCount = 3 : [];
         rightCount--;
         renderHtml(rightCount)
-        rightCount == 1 ? rightCount = 3 : [];
-        console.log(rightCount);
+        return;
     }
 
-
-
+    window.addEventListener("keydown", (e) => {
+        if (e.keyCode == 37) {
+            leftCount == 2 ? leftCount = 0 : [];
+            leftCount++;
+            renderHtml(leftCount)
+            return;
+        }
+        else if (e.keyCode == 39) {
+            rightCount == 1 ? rightCount = 3 : [];
+            rightCount--;
+            renderHtml(rightCount)
+            return;
+        }
+        return;
+    })
 })();

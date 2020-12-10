@@ -1,0 +1,57 @@
+@media screen and (min-width:1200px) {
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 10vh 15vw 0vh 2vw;
+        justify-content: center;
+    }
+
+    .header {
+        height: 120vh !important;
+
+        img {
+            width: 100vw;
+            object-fit: cover;
+            height: 50vh;
+        }
+
+        &__buttons {
+            position: fixed;
+            top: 52vh !important;
+            left: 3vw !important;
+
+        }
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    section {
+
+        p {
+            margin-left: 230px;
+            text-align: left;
+            font-size: 30px !important;
+            line-height: 40px !important;
+            max-width: 100%;
+            margin-top: 15vh !important;
+            width: 78% !important;
+
+            &.one {
+                text-indent: 20px;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 24px !important;
+                flex-direction: row !important;
+                margin-top: 20px !important;
+
+                span {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+}
